@@ -156,10 +156,8 @@
 
         window.requestAnimationFrame(updateWebcamFrame);
 
-        // Runs the prediction function every 3 seconds (3000ms)
         predictInterval = setInterval(async () => {
             await predict();
-            
             const now = new Date();
             document.getElementById("timer-log").innerText = `Last updated: ${now.toLocaleTimeString()}`;
         }, 3000);
